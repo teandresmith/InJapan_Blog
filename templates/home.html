@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<!--
+    This Home page includes a simple image, and an unordered list
+-->
+<body>
+    {% extends "layout.html" %}
+    {% block content %}
+    <div class="home">
+        <h1>Home</h1>
+        <img src="https://cdn.pixabay.com/photo/2016/12/12/22/31/japan-1902834_960_720.jpg"
+            alt="Picture of Temple and Mt. Fuji in Japan">
+    </div>
+    <div class="content">
+        <h2 id="welcome">Welcome！</h2>
+        <p id='welcome_content'>
+            Hi！ or should I say こんにちは！(Konnichiwa). If you didn't already know, that means good
+            afternoon in Japanese.
+            Welcome to a start up blog that reaches out to those who are curious about the life of a foreigner in Japan!
+            I hope to be able
+            to provide a real outlook on Japan from all angles.
+            I will cover a multitude of topics that are but not limited to:
+        <ul>
+            <li>Japanese Current Events</li>
+            <li>Japanese Language</li>
+            <li>Local Traditions</li>
+            <li>Social Expectations in Japan</li>
+            <li>And much more!</li>
+        </ul>
+        </p>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

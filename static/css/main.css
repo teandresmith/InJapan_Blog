@@ -1,0 +1,33 @@
+div.home img {
+  width: 800px;
+  height: 350px !important;
+  display:block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/*
+* Resources Page CSS Markups
+*/
+.resource_list {
+  list-style-type: none;
+}
+
+.resource_list h2 {
+  display: inline;
+}
+
+.resource_list img {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+}
+
+.about {
+  padding: 5px
+}
