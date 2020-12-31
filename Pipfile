@@ -6,6 +6,10 @@ name = "pypi"
 [packages]
 flask = "*"
 gunicorn = "*"
+flask-sqlalchemy = "*"
+psycopg2 = "*"
+psycopg2-binary = "*"
+py3-validate-email = "*"
 
 [dev-packages]
 pylint = "*"

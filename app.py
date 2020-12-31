@@ -1,9 +1,34 @@
 'This Python File uses Flask to render web pages'
 
 from flask import Flask, render_template, request, url_for
-
+from flask_sqlalchemy import SQLAlchemy
+from send_mail import send_mail
 
 app = Flask(__name__)
+
+ENV = 'prod'
+
+if ENV == 'dev':
+    app.debug = True
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:2706@localhost/Blog'
+else:
+    app.debug = False
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://hdizlevcrxnlbh:54512fd913d8b2cbd79770df9c4f489b317d1f9cc3d4d63a77476b9d115c0bf7@ec2-52-200-16-99.compute-1.amazonaws.com:5432/ddcogc5ud9qnv'
+
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+
+class Feedback(db.Model):
+    __tablename__ = 'Feedback'
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(50), unique=True)
+    message = db.Column(db.Text())
+
+    def __init__(self, email, message):
+        self.email = email
+        self.message = message
 
 
 @app.route('/')
@@ -29,10 +54,38 @@ def common_phrases():
     '''This function renders the common phrases web page'''
     return render_template('common_phrases.html')
 
+
 @app.route('/blog')
 def blog():
     '''This function renders the blog web page'''
     return render_template('blog.html')
 
+
+@app.route('/blog/first_post')
+def first_blog():
+    '''This function renders the first blog post web page'''
+    return render_template('first_blog.html')
+
+
+@app.route('/contact')
+def contact():
+    '''This function renders the contact web page'''
+    return render_template('contact_us.html')
+
+
+@app.route('/contact/submit', methods=['Get', 'POST'])
+def contact_submit():
+    if request.method == 'POST':
+        email = request.form['email']
+        message = request.form['message']
+        if email == '' or message == '':
+            return render_template('contact_us.html', error='Please fill in all fields')
+        data = Feedback(email, message)
+        db.session.add(data)
+        db.session.commit()
+        send_mail(email, message)
+        return render_template('success.html')
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

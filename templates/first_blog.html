@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    {% extends 'layout.html' %}
+    {% block content %}
+    <div>
+        <div class="d-flex flex-column bd-highlight mb-3 home-center-bottom">
+            <img class="blogging-img" id="wizardtoad" src="{{ url_for('static', filename='wizardtoad.png')}}" alt="Wizard Toad">
+            <label for="wizardtoad"> Written: December 31, 2020 at 21:06JST (9:06PM JST)</label>
+            <p class="blogging-paragraph">
+                At this very moment, this is my wife and I's spirit animal. She insisted that I use this photo for my
+                first blog post, and I figured she was thinking in the right direction. Anyway, let's get down to
+                business.
+            </p>
+            <div>
+                <h3 class="blogging-heading">InJapan: What is it about?</h3>
+                <p class="blogging-paragraph">
+                    Well, to say it simply, this blog is about supplying people around the world knowledge about Japan.
+                    This
+                    isn't the only blog about Japan, but the one thing this blog will be able to do is tell the truth,
+                    and
+                    only the truth. Before I came to Japan, I thought I had learned all about its culture through its
+                    sources of media...in other words, manga, anime, video games, movies and basic news sources such as
+                    NHK.
+                    But the truth is, those sources only displayed how great Japan was, and not the issues that are
+                    prevalent here. Most people who have never been to Japan or have visited for a short period of time,
+                    see
+                    Japan as this super peaceful and nice country. I won't deny that the people of Japan are nice, but I
+                    feel the passive-aggressive mindset of Asia in general goes unnoticed by foreigners. This isn't me
+                    trying to bash Japan or anything, but this is an attempt to shine the light on real life experiences
+                    as
+                    a foreigner who lives and sees Japan on a daily basis. With that said, my focus is to provide real,
+                    raw-uncut information about Japan's culture and society. At the same time, I will like to provide
+                    bite-size information on the Japanese language and other random topics pertaining to my experiences
+                    here
+                    in Japan.
+                </p>
+            </div>
+            <div>
+                <h3 class="blogging-heading">The Blogger: Who am I?</h3>
+                <p class="blogging-paragraph">
+                    You can call me the WizardToad for now! I am married to a Taiwanese Woman (Also known as the Toad
+                    Sorceress) that works here in Japan, and keeps me in check on a daily basis. I am an American/German
+                    that aspires to work in game development one day. At this very time, I am a senior in
+                    College pursuing a Bachelor in Computer Science. I have many hobbies which include super nerdy ones
+                    such
+                    as reading manga, watching anime, and playing World of Warcraft. I have some non-nerdy
+                    hobbies too like any sport activity. I am currently studying Japanese, and have recently taken the
+                    JPLT
+                    N3 last December 2019...I'm not very confident that I passed, but we will see the results this
+                    coming
+                    Februray 2021! Mentioning Japanese, in the future, when my Japanese abilities allow, I will have all
+                    my
+                    blog posts written in both English and Japanese. For now, majority of them will be in English, but I
+                    will provide short posts in Japanese. Anyway, that is enough about me for now...let's talk about
+                    future
+                    goals!
+                </p>
+            </div>
+            <div>
+                <h3 class="blogging-heading">InJapan: Future Expectations?</h3>
+                <p class="blogging-paragraph">
+                    Honestly, I am not sure about the future expectations of this blog website. I hope to be able to
+                    maintain it and be able to connect with others that are interested in learning through my
+                    experiences.
+                    I expect to continue on building from this beginning, and establishing a site where many others can
+                    gather and learn about Japan as if they were living in the country themselves. Maybe as time goes
+                    on, I
+                    can reveal my true identity, but until then...I am WizardToad!
+                </p>
+            </div>
+            <div class="home-center-bottom">
+                <h3 class="blogging-heading">I Leave With This!</h3>
+                <p class="blogging-paragraph">
+                    If there are any questions about me or this website, or have any recommendations for topic ideas or
+                    website additions, feel free to use the contact link on the bottom of this website. Once you click
+                    on
+                    the link, just fill in the blanks accordingly, and I will get back to you as soon as possible. If
+                    not,
+                    then I leave you with this!
+                </p>
+                <img class="blogging-center-layout blogging-img" id="one_punchman_dance" src="{{ url_for('static', filename='one_punchman_dance.gif')}}"
+                    alt="One Punch-Man Dance">
+                <label for="one_punchman_dance"> Because who doesn't like dancing?</label>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

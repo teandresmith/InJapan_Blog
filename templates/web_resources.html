@@ -1,70 +1,93 @@
 <!DOCTYPE html>
 <html>
 <!--
-    This HTML Page connects links to Images which allows the user to access the resources quickly
-    Instead of saving the images locally, it was decided to grab the photos via its URL
+    Japanese Resources I Use
 -->
+
 <body>
     {% extends "layout.html" %}
     {% block content %}
-    <h1>Resources for Japanese</h1>
-    <div class="resources">
-        <ul class='resource_list'>
-            <li>
-                <h2>WaniKani</h2>
+    <h1>Japanese Web Resources</h1>
+    <div class="d-flex flex-column bd-highlight mb-3 web-res">
+        <div class="media web-res-list">
+            <div class="media-left media-middle">
                 <a href="https://www.wanikani.com/" target="_blank">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.BuksDrCt0HrZHxlWzOGrxgHaHa%26pid%3DApi&f=1"
-                        alt="WaniKani">
+                    <img class="media-object  sidebar-img"
+                        src="{{ url_for('static', filename='wanikani.jpg') }}" alt="Wanikani">
                 </a>
+            </div>
+            <div class="media-body web-res-txt">
+                <h4 class="media-heading">WaniKani</h4>
                 <p>
-                    Japanese is comprised of three writing systems. Kanji, which derived from the Chinese Languages, and
-                    Hiragana/Katakana
-                    which are Japan's very own unique characters. For individuals that are interested in reading
-                    Japanese materials like Manga
-                    or looking to survive Japan in general. WaniKani is a great starting point as the websites focuses
-                    on helping users learn
+                    Japanese is comprised of three writing systems. Kanji, which derived from the Chinese
+                    Languages, and Hiragana/Katakana which are Japan's very own unique characters. For individuals
+                    that are interested in reading Japanese materials like Manga
+                    or looking to survive Japan in general. WaniKani is a great starting point as the websites
+                    focuses on helping users learn
                     the most commonly used kanji in Japan through SRS learning. I can say for sure that WaniKani has
-                    helped developed my ability
-                    to recognize Kanji and it has also impressed many of the locals I have encountered.
+                    helped developed my ability to recognize Kanji and it has also impressed many of the locals I
+                    have encountered.
                 </p>
-            </li>
-            <li>
-                <h2>Anki</h2>
+            </div>
+        </div>
+        <div class="media web-res-list">
+            <div class="media-left media-middle">
                 <a href="https://ankiweb.net" target="_blank">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.QXYYqBUzvwj-zipBVO-zMQAAAA%26pid%3DApi&f=1"
-                        alt="AnkiWeb">
+                    <img class="media-object sidebar-img"
+                        src="{{ url_for('static', filename='anki.jpg') }}" alt="Anki">
                 </a>
+            </div>
+            <div class="media-body web-res-txt">
+                <h4 class="media-heading">Anki</h4>
                 <p>
-                    Anki is japanese for memorization, and this application specializes in just that. Another SRS
-                    flashcard system that focuses on consistent
-                    studying. For that specific reason, Anki is perfect for creating custom deck flashcards or to search
-                    into user shared decks from others.
-                    The application will allow individuals to quickly learn vocabulary, which you will need to know a
-                    lot of, while being able to digest
-                    the language piece by piece.
+                    Anki is japanese for memorization, and this application specializes in just that. Another
+                    SRS flashcard system that focuses on consistent studying. For that specific reason, Anki is
+                    perfect for creating custom deck flashcards or to
+                    search into user shared decks from others.The application will allow individuals to quickly
+                    learn vocabulary, which you will need to know
+                    alot of, while being able to digest the language piece by piece.
                 </p>
-            </li>
-            <li>
-                <h2>Bunpro</h2>
+            </div>
+        </div>
+        <div class="media web-res-list">
+            <div class="media-left media-middle">
+                <a href="https://www.japanesepod101.com/" target="_blank">
+                    <img class="media-object sidebar-img"
+                        src="{{ url_for('static', filename='japanesepod101.jpg') }}" alt="Japanese Pod 101">
+                </a>
+            </div>
+            <div class="media-body web-res-txt">
+                <h4 class="media-heading">Japanese Pod 101</h4>
+                <p>
+                    Japanese Pod 101 is a subscription based japanese resource. There is many resources out there for
+                    listening, but I have enjoyed the collection of different series JPod 101 has. The best part about
+                    JPod101 is that it has content for every single level of japanese. From Beginner to Advanced, there
+                    is content that can be useful in bettering your listening abilities. At the same time, JPod101 has a
+                    mobile app and all of their content is accessible from it. If you are looking to improve your
+                    japanese, I think it is a decent resource.
+                </p>
+            </div>
+        </div>
+        <div style="padding-top: 10px;" class="media">
+            <div class="media-left media-middle">
                 <a href="https://www.bunpro.jp/" target="_blank">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.TDCjHRosYJvfEtUh8ibYIgHaHa%26pid%3DApi&f=1"
-                        alt="Bunpro">
+                    <img class="media-object sidebar-img"
+                        src="{{ url_for('static', filename='bunpro.jpg') }}" alt="Bunpro">
                 </a>
+            </div>
+            <div class="media-body web-res-txt">
+                <h4 class="media-heading">Bunpro</h4>
                 <p>
-                    Bunpro is another SRS similar system that focuses specifically on grammar. Bunpro is actually a play
-                    off
-                    the japanese word "bunpou" which means grammar. As you can tell, I am a big fan of SRS systems
-                    because
-                    I believe that they are valuable assets when learning a language. Of course, one cannot learn a
-                    language
-                    with only SRS, but it definitely allows you to study a lot of information in a short amount of time
-                    efficiently!
+                    Bunpro is another SRS similar system that focuses specifically on grammar. Bunpro is
+                    actually a play off the japanese word "bunpou" which means grammar. As you can tell, I am a
+                    big fan of SRS systems because
+                    I believe that they are valuable assets when learning a language. Of course, one cannot
+                    learn a language with only SRS, but it definitely allows you to study a lot of information
+                    in a short amount of time efficiently!
                 </p>
-            </li>
-
-        </ul>
+            </div>
+        </div>
     </div>
-
     {% endblock %}
 </body>
 
