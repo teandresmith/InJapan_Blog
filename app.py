@@ -84,7 +84,7 @@ def contact_submit():
         db.session.add(data)
         db.session.commit()
         send_mail(email, message)
-        return render_template('success.html')
+        return render_template('successful_submission.html')
 
 
 if __name__ == '__main__':
