@@ -21,9 +21,9 @@ db = SQLAlchemy(app)
 
 
 class Feedback(db.Model):
-    __tablename__ = 'Feedback'
+    __tablename__ = 'blogreport'
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(50), unique=True)
+    email = db.Column(db.String(50))
     message = db.Column(db.Text())
 
     def __init__(self, email, message):
