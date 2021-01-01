@@ -10,7 +10,7 @@ ENV = 'prod'
 
 if ENV == 'dev':
     app.debug = True
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:2706@localhost/Blog'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:2706@localhost/feedback'
 else:
     app.debug = False
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://hdizlevcrxnlbh:54512fd913d8b2cbd79770df9c4f489b317d1f9cc3d4d63a77476b9d115c0bf7@ec2-52-200-16-99.compute-1.amazonaws.com:5432/ddcogc5ud9qnv'
