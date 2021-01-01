@@ -73,7 +73,7 @@ def contact():
     return render_template('contact_us.html')
 
 
-@app.route('/contact/submit', methods=['Get', 'POST'])
+@app.route('/contact/submit', methods=['POST'])
 def contact_submit():
     if request.method == 'POST':
         email = request.form['email']
