@@ -21,7 +21,7 @@
   -->
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a lang="ja-jp" class="navbar-brand" href="{{ url_for('home.home_page') }}">日本の中 - InJapan</a>
+    <a lang="ja-jp" class="navbar-brand" href="{{ url_for('home') }}">日本の中 - InJapan</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="{{ url_for('home.home_page') }}">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -37,15 +37,15 @@
             Resources
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ url_for('learn.web_resources')}}">Web-Based Resources</a>
-            <a class="dropdown-item" href="{{ url_for('learn.common_phrases')}}">Common Japanese Phrases</a>
+            <a class="dropdown-item" href="{{ url_for('web_resources')}}">Web-Based Resources</a>
+            <a class="dropdown-item" href="{{ url_for('common_phrases')}}">Common Japanese Phrases</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('blog.blog') }}">Blog</a>
+          <a class="nav-link" href="{{ url_for('blog') }}">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('about.about_page') }}">About</a>
+          <a class="nav-link" href="{{ url_for('about') }}">About</a>
         </li>
       </ul>
     </div>
@@ -107,10 +107,10 @@
       <a class="nav-link bottom-navbar" href="#">Travel</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link bottom-navbar" href="{{ url_for('contact.contact_page')}}">Contact</a>
+      <a class="nav-link bottom-navbar" href="{{ url_for('contact')}}">Contact</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active bottom-navbar" aria-current="page" href="{{ url_for('blog.blog') }}">Blog</a>
+      <a class="nav-link active bottom-navbar" aria-current="page" href="{{ url_for('blog') }}">Blog</a>
     </li>
   </ul>
 

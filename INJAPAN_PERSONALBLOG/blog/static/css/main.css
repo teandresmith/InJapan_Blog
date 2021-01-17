@@ -1,0 +1,52 @@
+
+/*
+ web_resources.html styling components
+*/
+
+.web-res {
+  padding-top: 35px;
+}
+
+.web-res-list {
+  padding-top: 10px;
+  border-bottom: groove;
+  border-bottom-color: lightgray;
+  border-bottom-width: 2px;
+}
+
+.web-res-txt {
+  padding-left: 15px;
+}
+
+/*
+ Blog.html styling components
+*/
+
+.blog-img {
+  height: 200px;
+  width: 200px;
+}
+
+/*
+ General Styling Components for blog posts
+*/
+
+.blogging-center-layout {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogging-img {
+  padding-top: 10px;
+}
+
+.blogging-heading {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.blogging-paragraph {
+  font-size: 14;
+  line-height: 1.5;
+}
