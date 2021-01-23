@@ -1,91 +1,88 @@
 <!DOCTYPE html>
-<html>
 
-<body>
-    {% extends "layout.html" %}
-    {% block content %}
-    <div class="home-center-bottom">
-        <h1 style="text-align: center;" class="blogging-heading"> 10 Common Japanese Phrases</h1>
-        <p>
-            If you ever decide to travel to Japan, a few common phrases can go a long way. Here is a few common Japanese
-            phrases that
-            can help you along the way.
-        </p>
-    </div>
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">English</th>
-                <th scope="col">Japanese (No Kanji)</th>
-                <th scope="col">Japanese (With Kanji)</th>
-                <th scope="col">Romanji</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">Good Afternoon！</th>
-                <td>こんにちは！</td>
-                <td>こんにちは！</td>
-                <td>Konnichiwa</td>
-            </tr>
-            <tr>
-                <th scope="row">Thank you!</th>
-                <td>ありがとうございます。</td>
-                <td>ありがとうございます。</td>
-                <td>Arigatou Gozaimasu</td>
-            </tr>
-            <tr>
-                <th scope="row">Excuse Me.</th>
-                <td>すみません</td>
-                <td>すみません</td>
-                <td>Sumimasen</td>
-            </tr>
-            <tr>
-                <th scope="row">Where is the train?</th>
-                <td>でんしゃはどこですか</td>
-                <td>電車はどこですか</td>
-                <td>Densha wa doko desu ka</td>
-            </tr>
-            <tr>
-                <th scope="row">How much is it?</th>
-                <td>いくらですか</td>
-                <td>いくらですか</td>
-                <td>Ikura desu ka</td>
-            </tr>
-            <tr>
-                <th scope="row">Excuse me. I am lost.</th>
-                <td>すみません、みちにまよいます</td>
-                <td>すみません、道に迷います</td>
-                <td>Sumimasen, michi ni mayoimasu</td>
-            </tr>
-            <tr>
-                <th scope="row">What is this?</th>
-                <td>これはなんですか</td>
-                <td>これは何ですか</td>
-                <td>Kore wa nan desu ka</td>
-            </tr>
-            <tr>
-                <th scope="row">I don't understand.</th>
-                <td>わかりません</td>
-                <td>分かりません</td>
-                <td>Wakarimasen</td>
-            </tr>
-            <tr>
-                <th scope="row">Can you speak English?</th>
-                <td>えいごをはなせますか</td>
-                <td>英語を話せますか</td>
-                <td>eigo o hanasemasu ka</td>
-            </tr>
-            <tr>
-                <th scope="row">Can you take a picture for me?</th>
-                <td>しゃしんをとってもらいますか</td>
-                <td>写真を撮ってもらいますか</td>
-                <td>shashin o totte moraimasu ka</td>
-            </tr>
-        </tbody>
-    </table>
+{% extends "layout.html" %}
 
-    {% endblock %}
-</body>
+{% block title %} Common Phrases | InJapan{% endblock %}
+{% block content %}
+<div class="home-center-bottom">
+    <h1 style="text-align: center;" class="blogging-heading"> 10 Common Japanese Phrases</h1>
+    <p>
+        If you ever decide to travel to Japan, a few common phrases can go a long way. Here is a few common Japanese
+        phrases that
+        can help you along the way.
+    </p>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">English</th>
+            <th scope="col">Japanese (No Kanji)</th>
+            <th scope="col">Japanese (With Kanji)</th>
+            <th scope="col">Romanji</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Good Afternoon！</th>
+            <td>こんにちは！</td>
+            <td>こんにちは！</td>
+            <td>Konnichiwa</td>
+        </tr>
+        <tr>
+            <th scope="row">Thank you!</th>
+            <td>ありがとうございます。</td>
+            <td>ありがとうございます。</td>
+            <td>Arigatou Gozaimasu</td>
+        </tr>
+        <tr>
+            <th scope="row">Excuse Me.</th>
+            <td>すみません</td>
+            <td>すみません</td>
+            <td>Sumimasen</td>
+        </tr>
+        <tr>
+            <th scope="row">Where is the train?</th>
+            <td>でんしゃはどこですか</td>
+            <td>電車はどこですか</td>
+            <td>Densha wa doko desu ka</td>
+        </tr>
+        <tr>
+            <th scope="row">How much is it?</th>
+            <td>いくらですか</td>
+            <td>いくらですか</td>
+            <td>Ikura desu ka</td>
+        </tr>
+        <tr>
+            <th scope="row">Excuse me. I am lost.</th>
+            <td>すみません、みちにまよいます</td>
+            <td>すみません、道に迷います</td>
+            <td>Sumimasen, michi ni mayoimasu</td>
+        </tr>
+        <tr>
+            <th scope="row">What is this?</th>
+            <td>これはなんですか</td>
+            <td>これは何ですか</td>
+            <td>Kore wa nan desu ka</td>
+        </tr>
+        <tr>
+            <th scope="row">I don't understand.</th>
+            <td>わかりません</td>
+            <td>分かりません</td>
+            <td>Wakarimasen</td>
+        </tr>
+        <tr>
+            <th scope="row">Can you speak English?</th>
+            <td>えいごをはなせますか</td>
+            <td>英語を話せますか</td>
+            <td>eigo o hanasemasu ka</td>
+        </tr>
+        <tr>
+            <th scope="row">Can you take a picture for me?</th>
+            <td>しゃしんをとってもらいますか</td>
+            <td>写真を撮ってもらいますか</td>
+            <td>shashin o totte moraimasu ka</td>
+        </tr>
+    </tbody>
+</table>
 
-</html>
+{% endblock %}

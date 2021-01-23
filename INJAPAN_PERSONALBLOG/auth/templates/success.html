@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+
+
+    {% extends "layout.html" %}
+
+    {% block title %} Success Login | InJapan{% endblock %}
+
+    {% block content %}
+    <div style="display: block; justify-content: center; align-items: center;" class="success">
+        <h2>Login Successful</h2>
+        <img style="width: 500px;" src="{{ url_for('contact.static', filename='naruto_thumbs_up.gif') }}" alt="thumbs up gif">
+    </div>
+    {% endblock %}
+
+

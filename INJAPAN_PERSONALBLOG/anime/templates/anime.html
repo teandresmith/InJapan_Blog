@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% extends "layout.html" %}
+
+{% block title %} Anime | InJapan{% endblock %}
+
+{% block content %}
+{% for anime in anime_descend_list %}
+<div class="d-flex flex-column bd-highlight mb-3 web-res">
+  <div class="media">
+    <div class="media-left media-middle">
+      <a href="{{ url_for('anime.anime_recommendation', slug=anime.slug) }}">
+        <img class="media-object blog-img" src="{{ url_for('anime.static', filename=anime.image)}}"
+          alt="Blog Photo">
+      </a>
+    </div>
+    <div class="media-body web-res-txt">
+      <h4 class="media-heading" id="date">{{ anime.title }}</h4>
+      <label for="date">Posted on {{ anime.date.strftime('%B %d, %Y')}}</label>
+      <div>
+        {{ anime.subtitle | safe }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

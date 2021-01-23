@@ -1,0 +1,32 @@
+!DOCTYPE html>
+
+{% extends "layout.html" %}
+
+{% block title %} Learn | InJapan{% endblock %}
+{% block content %}
+<div class="container" style="padding-top: 20px;" >
+    <div class="row">
+        <div class="card col-5" style="width: 18rem; padding-right: 20px;">
+            <img src="{{ url_for('learn.static', filename='wanikani.jpg') }}" class="card-img-top" alt="Web Resources">
+            <div class="card-body">
+                <h5 class="card-title">Web Resources</h5>
+                <p class="card-text">A list of web resources that I have personally used to practice Japanese.</p>
+                <a href="{{ url_for('learn.web_resources')}}" class="btn btn-primary">Web Resources</a>
+            </div>
+        </div>
+        <div class="col"></div>
+        <div class="card col-5" style="width: 18rem;">
+            <img src="{{ url_for('learn.static', filename='nihongonomori.jpg') }}" class="card-img-top"
+                alt="Common Phrases">
+            <div class="card-body">
+                <h5 class="card-title">Common Japanese Phrases</h5>
+                <p class="card-text">A list of common japanese phrases that will help while visiting and traveling
+                    around
+                    Japan.
+                </p>
+                <a href="{{ url_for('learn.common_phrases')}}" class="btn btn-primary">Common Phrases</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

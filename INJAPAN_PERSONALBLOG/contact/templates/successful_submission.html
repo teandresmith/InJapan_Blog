@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html>
 
-<body>
-    {% extends "layout.html" %}
-    {% block content %}
-    <div style="display: block; justify-content: center; align-items: center;" class="success">
-        <h2>Feedback Submitted!</h2>
-        <p>Thank you for sending feedback! If necessary, I will attempt to reach out as soon as possible!</p>
-        <img style="width: 500px;" src="{{ url_for('contact.static', filename='naruto_thumbs_up.gif') }}" alt="thumbs up gif">
-    </div>
-    {% endblock %}
-</body>
-
-</html>
+{% extends "layout.html" %}
+{% block title %} Success Login | InJapan{% endblock %}
+{% block content %}
+<div style="display: block; justify-content: center; align-items: center;" class="success">
+    <h2>Feedback Submitted!</h2>
+    <p>Thank you for sending feedback! If necessary, I will attempt to reach out as soon as possible!</p>
+    <img style="width: 500px;" src="{{ url_for('contact.static', filename='naruto_thumbs_up.gif') }}"
+        alt="thumbs up gif">
+</div>
+{% endblock %}

@@ -1,34 +1,28 @@
 <!DOCTYPE html>
-<html>
-<!--
-    This WebPage is still in works. It is dedicated to Login ability from Users
--->
 
-<body>
-    {% extends "layout.html" %}
-    {% block content %}
-    <h1>Contact Me</h1>
-    <h5>
-        Looking to reach out? Just fill out the form below and I will
-        get back to you as soon as possible!
-    </h5>
-    <form action="/contact/submit" method="POST" style="padding-top: 25px;">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Leave an Email Address I can respond back to! If you do
-                not want a response just type "anon"</label>
-            <input placeholder="example@mail.com" name="email" type="email" class="form-control" id="exampleInputEmail1"
-                aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Write Here...!</label>
-            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    {% if error %}
-    <p style="color: red;" class="error">Oops... {{ error | safe }}</p>
-    {% endif %}
-    {% endblock %}
-</body>
+{% extends "layout.html" %}
 
-</html>
+{% block title %} Contact Me | InJapan{% endblock %}
+{% block content %}
+<h1>Contact Me</h1>
+<h5>
+    Looking to reach out? Just fill out the form below and I will
+    get back to you as soon as possible!
+</h5>
+<form action="/contact/submit" method="POST" style="padding-top: 25px;">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Leave an Email Address I can respond back to! If you do
+            not want a response just type "anon"</label>
+        <input placeholder="example@mail.com" name="email" type="email" class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Write Here...!</label>
+        <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% if error %}
+<p style="color: red;" class="error">Oops... {{ error | safe }}</p>
+{% endif %}
+{% endblock %}

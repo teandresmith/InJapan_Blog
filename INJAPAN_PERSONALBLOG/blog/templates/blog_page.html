@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+
+
+{% extends "layout.html" %}
+
+{% block title %} Blog | InJapan{% endblock %}
+
+{% block content %}
+{% for blogs in blog_list %}
+<div class="d-flex flex-column bd-highlight mb-3 web-res">
+  <div class="media">
+    <div class="media-left media-middle">
+      <a href="{{ url_for('blog.blog_post', slug=blogs.slug) }}">
+        <img class="media-object blog-img" src="{{ url_for('blog.static', filename=blogs.image)}}"
+          alt="Blog Photo">
+      </a>
+    </div>
+    <div class="media-body web-res-txt">
+      <h4 class="media-heading" id="date">{{ blogs.title }}</h4>
+      <label for="date">Posted on {{ blogs.date.strftime('%B %d, %Y')}}</label>
+      <div>
+        {{ blogs.subtitle | safe }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

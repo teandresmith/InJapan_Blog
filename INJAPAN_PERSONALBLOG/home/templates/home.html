@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html>
-<!--
-    Home Page will display the latest blog material
--->
 
-<body>
-    {% extends "layout.html" %}
-    {% block content %}
-    <div>
-        <div class="d-flex flex-column bd-highlight mb-3 home-center">
-            <div style="display: flex; justify-content: center; align-items: center;">
-                <a href="{{ url_for('blog.first_blog') }}">
-                    <img src="{{ url_for('blog.static', filename='sakura_japan.jpg')}}" class="home-img" alt="First Blog">
-                </a>
-            </div>
-            <h2 style="padding-top: 15px;">First POST!</h2>
-            <p class="home-paragraph">
-                This is the first blog post! A quick preview that talks about the theme of the blog, who the blogger is,
-                the goals of the website and any future expectations. To check out the first InJapan Blog, click on the
-                photo above or click on blogs.
-            </p>
+{% extends "layout.html" %}
+
+{% block title %} Home | InJapan{% endblock %}
+{% block content %}
+{% for blogs in blog_list %}
+<div style="padding-top: 15px;">
+    <div class="d-flex flex-column bd-highlight mb-3 home-center">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <a href="{{ url_for('blog.blog_post', slug=blogs.slug) }}">
+                <img src="{{ url_for('blog.static', filename=blogs.image) }}" class="home-img" alt="Recent Blog Post">
+            </a>
+        </div>
+        <h2 style="padding-top: 15px;">{{ blogs.title}}</h2>
+        <div>
+            {{ blogs.subtitle | safe }}
         </div>
     </div>
-    {% endblock %}
-</body>
-
-</html>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+{% extends 'layout.html' %}
+
+{% block title %} {{ post.title }} | InJapan {% endblock %}
+
+{% block content %}
+<div>
+    <div class="d-flex flex-column bd-highlight mb-3 blogging-center-layout">
+        <h2 class="blogging-heading">Anime Recommendation of the Month: {{ post.title }}</h2>
+        <!-- 4:3 aspect ratio -->
+        <div class="embed-responsive embed-responsive-4by3" style="max-width: 560px; max-height: 315px;">
+            <iframe class="embed-responsive-item" src="{{ post.video }}"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                style="max-width: 560px; max-height: 315px;"></iframe>
+        </div>
+        <label style="text-align: left;" for="wizardtoad"> Posted on {{ post.date.strftime('%B %d, %Y') }}</label>
+        <div style="padding-top: 10px;">
+            {{ post.content | safe }}
+        </div>
+        <div class="home-center-bottom">
+            <h3 class="blogging-heading">I Leave With This!</h3>
+            <p class="blogging-paragraph">
+                If there are any questions about me or this website, or have any recommendations for topic ideas or
+                website additions, feel free to use the contact link on the bottom of this website. Once you click
+                on
+                the link, just fill in the blanks accordingly, and I will get back to you as soon as possible. If
+                not,
+                then I leave you with this!
+            </p>
+            <img class="blogging-center-layout blogging-img" id="one_punchman_dance"
+                src="{{ url_for('blog.static', filename='one_punchman_dance.gif')}}" alt="One Punch-Man Dance">
+            <label for="one_punchman_dance"> Because who doesn't like dancing?</label>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
