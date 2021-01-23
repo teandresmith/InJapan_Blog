@@ -33,6 +33,8 @@ Werkzeug = "==1.0.1"
 flask-mail = "*"
 flask-admin = "*"
 flask-login = "*"
+flask-bootstrap = "*"
+flask-wtf = "*"
 
 [dev-packages]
 
