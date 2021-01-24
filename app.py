@@ -22,7 +22,7 @@ def create_app():
 
     bootstrap.init_app(app)
 
-    ENV = 'prod'
+    ENV = 'dev'
     if ENV == 'dev':
         app.debug = True
         app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:2706@localhost/injapanblog'
