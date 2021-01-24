@@ -6,7 +6,7 @@
 {% block content %}
 <div class="container" style="padding-top: 20px;" >
     <div class="row">
-        <div class="card col-5" style="width: 18rem; padding-right: 20px;">
+        <div class="card col-xs-4 col-sm-4 col-md-3 col-lg-3" style="width: 18rem; padding-right: 20px;">
             <img src="{{ url_for('learn.static', filename='wanikani.jpg') }}" class="card-img-top" alt="Web Resources">
             <div class="card-body">
                 <h5 class="card-title">Web Resources</h5>
@@ -14,8 +14,8 @@
                 <a href="{{ url_for('learn.web_resources')}}" class="btn btn-primary">Web Resources</a>
             </div>
         </div>
-        <div class="col"></div>
-        <div class="card col-5" style="width: 18rem;">
+        <div class="col-1"></div>
+        <div class="card col-xs-4 col-sm-4 col-md-3 col-lg-3" style="width: 18rem;">
             <img src="{{ url_for('learn.static', filename='nihongonomori.jpg') }}" class="card-img-top"
                 alt="Common Phrases">
             <div class="card-body">

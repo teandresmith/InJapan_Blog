@@ -52,15 +52,15 @@
 
 
   <div class="container">
-    <div class="layout-page">
-      <div class="one-column">
+    <div class="row layout-page">
+      <div class="col-xs-12 col-sm-12 col-md-10">
         {% block content %}
         {% endblock %}
       </div>
-      <div class="sidebar-column">
-        <div class="d-flex flex-column bd-highlight mb-3 sidebar">
+      <div class="col-xs-4 col-sm-4 col-md-2">
+        <div class="d-flex flex-column bd-highlight mb-3 sidebar col-xs-4 col-sm-4">
           {% for anime in anime_list %}
-          <div class="p-2 bd-highlight sidebar-element">
+          <div class="p-2 bd-highlight sidebar-element col-xs-4 col-sm-4">
             <a href="{{ url_for('anime.anime_recommendation', slug=anime.slug) }}" target="_blank">
               <img src="{{ url_for('static', filename='jujutsu_kaisen.jpg')}}" class="sidebar-img"
                 alt="New Anime Recommendation">
@@ -68,24 +68,24 @@
             <p>New Anime Recommendation: {{anime.title}}</p>
           </div>
           {% endfor %}
-          <div class="p-2 bd-highlight sidebar-element">
+          <div class="p-2 bd-highlight sidebar-element col-xs-4 col-sm-4">
             <a href="https://www3.nhk.or.jp/nhkworld/en/news/"
               target="_blank">
               <img src="{{ url_for('static', filename='japan_no_international_travel.jpg')}}" class="sidebar-img"
-                alt="NHK News">
+                alt="NHK">
             </a>
             <p>NHK World News</p>
           </div>
-          <div class="p-2 bd-highlight sidebar-element">
+          <div class="p-2 bd-highlight sidebar-element col-xs-4 col-sm-4">
             <a href="https://gaijinpot.com/" target="_blank">
               <img src="{{ url_for('static', filename='gaijinpot.jpg')}}" class="sidebar-img" alt="Gaijinpot">
             </a>
             <p>Gaijinpot: Site for Foreigners</p>
           </div>
-          <div class="p-2 bd-highlight sidebar-element">
+          <div class="p-2 bd-highlight sidebar-element col-xs-4 col-sm-4">
             <a href="https://www.tofugu.com/" target="_blank">
               <img src="{{ url_for('static', filename='tofugu.jpg')}}" class="sidebar-img"
-                alt="Tofugu">
+                alt="Tofugu: Learn About Japan">
             </a>
             <p>Tofugu: Learn About Japan</p>
           </div>
