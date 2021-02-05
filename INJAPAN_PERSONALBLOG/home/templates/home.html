@@ -7,13 +7,13 @@
 {% for blogs in blog_list %}
 <div style="padding-top: 15px;">
     <div class="d-flex flex-column bd-highlight mb-3 home-center">
+        <h3 style="padding-top: 15px;">{{ blogs.title}}</h3>
         <div style="display: flex; justify-content: center; align-items: center;">
             <a href="{{ url_for('blog.blog_post', slug=blogs.slug) }}">
-                <img src="{{ url_for('blog.static', filename=blogs.image) }}" class="home-img" alt="Recent Blog Post">
+                <img src="{{ url_for('blog.static', filename=blogs.image) }}" class="img-fluid img-thumbnail home-img" alt="Recent Blog Post">
             </a>
         </div>
-        <h2 style="padding-top: 15px;">{{ blogs.title}}</h2>
-        <div>
+        <div style="padding: 10px 0 10px 0;">
             {{ blogs.subtitle | safe }}
         </div>
     </div>

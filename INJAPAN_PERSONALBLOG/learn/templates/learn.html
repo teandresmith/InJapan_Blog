@@ -4,9 +4,9 @@
 
 {% block title %} Learn | InJapan{% endblock %}
 {% block content %}
-<div class="container" style="padding-top: 20px;" >
+<div class="container pt-2" >
     <div class="row">
-        <div class="card col-xs-4 col-sm-4 col-md-3 col-lg-3" style="width: 18rem; padding-right: 20px;">
+        <div class="m-2 card col-xs-6 col-sm-6 col-md-4 col-lg-4" style="width: 17rem; box-sizing: border-box;">
             <img src="{{ url_for('learn.static', filename='wanikani.jpg') }}" class="card-img-top" alt="Web Resources">
             <div class="card-body">
                 <h5 class="card-title">Web Resources</h5>
@@ -14,8 +14,8 @@
                 <a href="{{ url_for('learn.web_resources')}}" class="btn btn-primary">Web Resources</a>
             </div>
         </div>
-        <div class="col-1"></div>
-        <div class="card col-xs-4 col-sm-4 col-md-3 col-lg-3" style="width: 18rem;">
+        <div class="m-2 col-1"></div>
+        <div class="card m-2 col-xs-6 col-sm-6 col-md-4 col-lg-4" style="width: 17rem; box-sizing: border-box;">
             <img src="{{ url_for('learn.static', filename='nihongonomori.jpg') }}" class="card-img-top"
                 alt="Common Phrases">
             <div class="card-body">

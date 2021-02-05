@@ -6,22 +6,20 @@
 
 {% block content %}
 {% for anime in anime_descend_list %}
-<div class="d-flex flex-column bd-highlight mb-3 web-res">
-  <div class="media">
-    <div class="media-left media-middle">
-      <a href="{{ url_for('anime.anime_recommendation', slug=anime.slug) }}">
-        <img class="media-object blog-img" src="{{ url_for('anime.static', filename=anime.image)}}"
-          alt="Blog Photo">
-      </a>
+<div class="list-group mb-3 ml-auto pt-2 col-xs-12 col-sm-12 col-md-9 col-lg-10">
+  <a href="{{ url_for('anime.anime_recommendation', slug=anime.slug) }}" class="list-group-item list-group-item-action m-1 ">
+    <div class="d-flex w-100 justify-content-between">
+      <h4 class="mb-1">{{ anime.title }}</h4>
+
+      <small>{{ anime.date.strftime('%B %d, %Y')}}</small>
     </div>
-    <div class="media-body web-res-txt">
-      <h4 class="media-heading" id="date">{{ anime.title }}</h4>
-      <label for="date">Posted on {{ anime.date.strftime('%B %d, %Y')}}</label>
-      <div>
-        {{ anime.subtitle | safe }}
-      </div>
+    <div class="text-center">
+      <img style="max-width: 250px; max-height: 250px;" class="media-object img-fluid web-res justify-content-center"
+        src="{{ url_for('anime.static', filename=anime.image)}}" alt="Blog Photo">
     </div>
-  </div>
+
+    <p class="mb-1">{{ anime.subtitle | safe }}</p>
+  </a>
 </div>
 {% endfor %}
 {% endblock %}

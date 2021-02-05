@@ -23,4 +23,4 @@ class Blogs(db.Model):
         self.slug = slug
 
     def __repr__(self):
-        return '<Blog %r>' % (self.id)
+        return '<Blog %r>' % (self.blog_id)

@@ -3,6 +3,7 @@ from api.models.model import db
 from api.models.Contact_Models.contact_model import Feedback
 from api.mail.send_feedback import sendmail
 from api.models.Anime_model.anime_model import AnimeTable
+from api.models.Tags_Models.tags_model import Tag
 
 contact_bp = Blueprint('contact', __name__,
                        template_folder='templates', static_folder='static')
@@ -17,13 +18,15 @@ contact_bp = Blueprint('contact', __name__,
 @contact_bp.route('/')
 def contact_page():
     '''This function renders the contact web page'''
+    tag_list = Tag.query.all()
     anime_list = AnimeTable.query.order_by(
         AnimeTable.date.desc()).limit(1).all()
-    return render_template('contact_us.html', anime_list=anime_list)
+    return render_template('contact_us.html', anime_list=anime_list, tag_list=tag_list)
 
 
 @contact_bp.route('/submit', methods=['POST'])
 def contact_submit():
+    tag_list = Tag.query.all()
     anime_list = AnimeTable.query.order_by(
         AnimeTable.date.desc()).limit(1).all()
     if request.method == 'POST':
@@ -35,4 +38,4 @@ def contact_submit():
         db.session.add(data)
         db.session.commit()
         sendmail(email, message)
-        return render_template('successful_submission.html', anime_list=anime_list)
+        return render_template('successful_submission.html', anime_list=anime_list, tag_list=tag_list)

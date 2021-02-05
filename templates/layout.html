@@ -52,47 +52,68 @@
 
 
 
-  <div class="container">
-    <div class="row layout-page">
-      <div class="col-xs-12 col-sm-12 col-md-10">
-        {% block content %}
-        {% endblock %}
+  <div class="container p-2">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" style="padding-bottom: 10px;">
+        <div style="">
+          {% block content %}
+          {% endblock %}
+        </div>
       </div>
-      <div class="col-xs-4 col-sm-4 col-md-2">
-        <div class="d-flex flex-column bd-highlight mb-3 sidebar col-xs-4 col-sm-4 visible-xs-*-inline-block visible-sm-*-inline-block">
+      <div class=" col-xs-12 col-sm-12 col-md-3 ml-auto col-lg-3">
+        <div class=" mb-3 col-xs-12 col-sm-12 col-md-12 col-lg-12 visible-xs-*-inline-block visible-sm-*-inline-block">
+
+          <div style="box-sizing: border-box; border-top: 1px solid lightgray; box-shadow: 0 1px 1px 1px lightgray;"
+            class="p-2 mt-4 sidebar-element col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div style="" class="">
+              <h4 style="text-align: left;">About</h4>
+              <div>
+                <p style="text-align: left; font-size: smaller;">
+                  Just a raw and uncut blog about another guy's experience as a foreigner here in Japan. This blog will seek to
+                  discuss various topics ranging from language and anime to cultural differences and societal
+                  expectations here in Japan.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div style="border-top: 1px solid lightgray; box-shadow: 0 1px 1px 1px lightgray;"
+            class="p-2 mt-3 sidebar-element col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="">
+              <h4 style="">Tags</h4>
+              <div style="" class="d-inline-flex p-2 flex-wrap">
+                {% for tag in tag_list %}
+                <a style="font-weight: 600;" class="btn btn-outline-dark btn-sm m-1" href="#" role="button">{{
+                  tag.tag_name}}</a>
+                {% endfor %}
+              </div>
+            </div>
+
+          </div>
+
           {% for anime in anime_list %}
-          <div class="p-2 bd-highlight sidebar-element col-xs-4 col-sm-4">
-            <a href="{{ url_for('anime.anime_recommendation', slug=anime.slug) }}" target="_blank">
-              <img src="{{ url_for('static', filename='jujutsu_kaisen.jpg')}}" class="sidebar-img"
-                alt="New Anime Recommendation">
-            </a>
-            <p>New Anime Recommendation: {{anime.title}}</p>
+
+          <div style="box-sizing: border-box; border-top: 1px solid lightgray; box-shadow: 0 1px 1px 1px lightgray;"
+            class="p-2 mt-3 sidebar-element col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+            <h4 style="margin-bottom: .5em;">Monthly Anime</h4>
+            <div class="sidebar-center">
+              <a href="{{ url_for('anime.anime_recommendation', slug=anime.slug) }}" target="_blank">
+                <img src="{{ url_for('static', filename='jujutsu_kaisen.jpg')}}" class="img-fluid "
+                  alt="New Anime Recommendation">
+              </a>
+              <p class="pt-2">{{anime.title}}</p>
+            </div>
+
           </div>
           {% endfor %}
-          <div class="p-2 bd-highlight sidebar-element col-xs-4 col-sm-4">
-            <a href="https://www3.nhk.or.jp/nhkworld/en/news/"
-              target="_blank">
-              <img src="{{ url_for('static', filename='japan_no_international_travel.jpg')}}" class="sidebar-img"
-                alt="NHK">
-            </a>
-            <p>NHK World News</p>
-          </div>
-          <div class="p-2 bd-highlight sidebar-element col-xs-4 col-sm-4">
-            <a href="https://gaijinpot.com/" target="_blank">
-              <img src="{{ url_for('static', filename='gaijinpot.jpg')}}" class="sidebar-img" alt="Gaijinpot">
-            </a>
-            <p>Gaijinpot: Site for Foreigners</p>
-          </div>
-          <div class="p-2 bd-highlight sidebar-element col-xs-4 col-sm-4">
-            <a href="https://www.tofugu.com/" target="_blank">
-              <img src="{{ url_for('static', filename='tofugu.jpg')}}" class="sidebar-img"
-                alt="Tofugu: Learn About Japan">
-            </a>
-            <p>Tofugu: Learn About Japan</p>
-          </div>
+
+
         </div>
       </div>
     </div>
+  </div>
 
   </div>
   <ul class="nav justify-content-center bg-light footer">

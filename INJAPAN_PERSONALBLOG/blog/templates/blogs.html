@@ -9,7 +9,7 @@
     <div class="d-flex flex-column bd-highlight mb-3 blogging-center-layout">
         <h2 class="blogging-heading"> {{ post.title }}</h2>
         <!-- 4:3 aspect ratio -->
-        <img class="in-blogging-img" id="wizardtoad" name="wizardtoad" src="{{ url_for('blog.static', filename=post.image ) }}"
+        <img class="img-fluid img-thumbnail home-img" id="wizardtoad" name="wizardtoad" src="{{ url_for('blog.static', filename=post.image ) }}"
             alt="Blog Feature Photo">
     </div>
     <div style="text-align: center;">

@@ -3,6 +3,7 @@ from api.wtf_forms.forms import LoginForm
 from flask import Blueprint, redirect, render_template, url_for
 from flask_login import login_user, logout_user
 from api.models.Anime_model.anime_model import AnimeTable
+from api.models.Tags_Models.tags_model import Tag
 
 auth_bp = Blueprint(
     'auth', __name__, template_folder='templates', static_folder='static')
@@ -35,9 +36,10 @@ def login():
 
 @auth_bp.route('/success')
 def login_success():
+    tag_list = Tag.query.all()
     anime_list = AnimeTable.query.order_by(
         AnimeTable.date.desc()).limit(1).all()
-    return render_template('success.html', anime_list=anime_list)
+    return render_template('success.html', anime_list=anime_list, tag_list=tag_list)
 
 
 @auth_bp.route('/logout')

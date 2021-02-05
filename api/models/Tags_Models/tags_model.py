@@ -10,4 +10,4 @@ class Tag(db.Model):
         self.tag_name = tag_name
 
     def __repr__(self):
-        return '<Tag %r>' % (self.id)
+        return '<Tag %r>' % (self.tag_name)
