@@ -2,6 +2,10 @@ html {
   font-family: sans-serif;
 }
 
+html, body {
+  height: 100%;
+}
+
 
 /*
  Layout.html Page Styling components
@@ -35,7 +39,6 @@ html {
   display: inline;
   float: left;
 }
-
 
 
 .sidebar-element {
@@ -75,6 +78,7 @@ html {
   position: relative;
   bottom: 0;
 }
+
 
 .bottom-navbar {
   color: black;

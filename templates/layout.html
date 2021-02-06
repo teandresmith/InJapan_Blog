@@ -52,10 +52,10 @@
 
 
 
-  <div class="container p-2">
-    <div class="row">
+  <div class="container p-2 ">
+    <div class="row ">
       <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" style="padding-bottom: 10px;">
-        <div style="">
+        <div>
           {% block content %}
           {% endblock %}
         </div>
@@ -69,7 +69,8 @@
               <h4 style="text-align: left;">About</h4>
               <div>
                 <p style="text-align: left; font-size: smaller;">
-                  Just a raw and uncut blog about another guy's experience as a foreigner here in Japan. This blog will seek to
+                  Just a raw and uncut blog about another guy's experience as a foreigner here in Japan. This blog will
+                  seek to
                   discuss various topics ranging from language and anime to cultural differences and societal
                   expectations here in Japan.
                 </p>
@@ -81,9 +82,9 @@
 
           <div style="border-top: 1px solid lightgray; box-shadow: 0 1px 1px 1px lightgray;"
             class="p-2 mt-3 sidebar-element col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="">
-              <h4 style="">Tags</h4>
-              <div style="" class="d-inline-flex p-2 flex-wrap">
+            <div>
+              <h4>Tags</h4>
+              <div class="d-inline-flex p-2 flex-wrap">
                 {% for tag in tag_list %}
                 <a style="font-weight: 600;" class="btn btn-outline-dark btn-sm m-1" href="#" role="button">{{
                   tag.tag_name}}</a>
@@ -99,7 +100,7 @@
             class="p-2 mt-3 sidebar-element col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
             <h4 style="margin-bottom: .5em;">Monthly Anime</h4>
             <div class="sidebar-center">
-              <a href="{{ url_for('anime.anime_recommendation', slug=anime.slug) }}" target="_blank">
+              <a href="{{ url_for('anime.anime_recommendation', slug=anime.slug) }}">
                 <img src="{{ url_for('static', filename='jujutsu_kaisen.jpg')}}" class="img-fluid "
                   alt="New Anime Recommendation">
               </a>
@@ -116,20 +117,23 @@
   </div>
 
   </div>
-  <ul class="nav justify-content-center bg-light footer">
-    <li class="nav-item">
-      <a class="nav-link active bottom-navbar" aria-current="page" href="{{ url_for('learn.japanese') }}">Learn</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link bottom-navbar" href="#">Travel</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link bottom-navbar" href="{{ url_for('contact.contact_page')}}">Contact</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active bottom-navbar" aria-current="page" href="{{ url_for('blog.blog') }}">Blog</a>
-    </li>
-  </ul>
+  <div>
+    <ul class="nav justify-content-center footer bg-light">
+      <li class="nav-item">
+        <a class="nav-link active bottom-navbar" aria-current="page" href="{{ url_for('learn.japanese') }}">Learn</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link bottom-navbar" href="#">Travel</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link bottom-navbar" href="{{ url_for('contact.contact_page')}}">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active bottom-navbar" aria-current="page" href="{{ url_for('blog.blog') }}">Blog</a>
+      </li>
+    </ul>
+  </div>
+
 
   <!--
     The necessary scripts to allow Bootstrap to function properly
