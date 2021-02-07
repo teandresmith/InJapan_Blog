@@ -9,7 +9,8 @@ anime_bp = Blueprint(
 @anime_bp.route('/')
 def anime_page():
     tag_list = Tag.query.all()
-    anime_list = AnimeTable.query.all()
+    anime_list = AnimeTable.query.order_by(
+        AnimeTable.date.desc()).limit(1).all()
     anime_descend_list = AnimeTable.query.order_by(
         AnimeTable.date.desc()).all()
     return render_template('anime.html', anime_descend_list=anime_descend_list, anime_list=anime_list, tag_list=tag_list)
