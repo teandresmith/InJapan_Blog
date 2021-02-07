@@ -54,7 +54,7 @@
 
   <div class="container p-2 ">
     <div class="row ">
-      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" style="padding-bottom: 10px;">
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" style="padding-bottom: 10px; ">
         <div>
           {% block content %}
           {% endblock %}
@@ -101,7 +101,7 @@
             <h4 style="margin-bottom: .5em;">Monthly Anime</h4>
             <div class="sidebar-center">
               <a href="{{ url_for('anime.anime_recommendation', slug=anime.slug) }}">
-                <img src="{{ url_for('static', filename='jujutsu_kaisen.jpg')}}" class="img-fluid "
+                <img src="{{ url_for('static', filename=anime.image)}}" class="img-fluid "
                   alt="New Anime Recommendation">
               </a>
               <p class="pt-2">{{anime.title}}</p>
