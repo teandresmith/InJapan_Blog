@@ -15,10 +15,12 @@ from INJAPAN_PERSONALBLOG.home.views import home_bp
 from INJAPAN_PERSONALBLOG.learn.views import learn_bp
 from INJAPAN_PERSONALBLOG.travel.views import travel_bp
 
+import config
+
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'secret'
+    app.config['SECRET_KEY'] = config.secret_key
 
     bootstrap.init_app(app)
 

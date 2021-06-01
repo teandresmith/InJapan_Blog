@@ -1,0 +1,1 @@
+secret_key = '!QAZ@WSX1qaz2wsx1234567890'
